@@ -1,70 +1,72 @@
-# Python Project: Interactive Calculator
+#python project: interactive calculator
 
-# Function to perform addition
-def add(a, b):
-    return a + b
+#fun to perform addition
+def add(a,b):
+    return a+b
 
-# Function to perform subtraction
-def subtract(a, b):
-    return a - b
+#function to perform subtraction
+def subtract(a,b):
+    return a-b
 
-# Function to perform multiplication
-def multiply(a, b):
-    return a * b
+#function to perform multiplication 
+def multiply(a,b):
+    return a*b
 
-# Function to perform division
-def divide(a, b):
-    if b == 0:
-        raise ValueError("Cannot divide by zero!")
-    return a / b
+#function to perform division
+def divide(a,b):
+    if b==0:
+        raise ValueError("cannot divide be zero!")
+    return a/b
 
-# Function to get user input for numbers
+#function to get user input for numbers 
 def get_user_input():
     while True:
         try:
-            num1 = float(input("Enter the first number: "))
-            num2 = float(input("Enter the second number: "))
-            return num1, num2
+            num1=float(input("Enter the first number:"))
+            num2=float(input("Enter the second number"))
+            return num1,num2
         except ValueError:
-            print("Invalid input. Please enter valid numbers.")
+            print("Invalid input.Please enter valid numbers.")
 
-# Main function to run the interactive calculator
+#main funtion to run the interactive calculator
 def main():
-    print("Welcome to the Interactive Calculator!")
-    print("Select an operation:")
-    print("1. Addition")
-    print("2. Subtraction")
-    print("3. Multiplication")
-    print("4. Division")
-    print("5. Exit")
+    print("Welcome to the Interactive Calculator ")
+    print("Select an operator")
+    print("1.Addition")
+    print("2.Subtraction")
+    print("3.Multiplication")
+    print("4.Division")
+    print("5.Exit")
 
     while True:
-        choice = input("Enter the number of your choice (1-5): ")
+        choice =input ("Enter the number of your choice (1-5):")
 
-        if choice == '5':
-            print("Goodbye!")
-            break
+        if choice=='5':
+            print("goodbye")
+            break 
 
-        if choice not in ('1', '2', '3', '4'):
-            print("Invalid choice. Please enter a valid number.")
-            continue
+        if choice not in ('1','2','3','4'):
+            print("Invalid choice.Please enter a valid number")
+            continue 
 
-        num1, num2 = get_user_input()
+        num1,num2=get_user_input()
 
-        if choice == '1':
-            result = add(num1, num2)
-        elif choice == '2':
-            result = subtract(num1, num2)
-        elif choice == '3':
-            result = multiply(num1, num2)
+        if choice=='1':
+            result=add(num1,num2)
+        elif choice=='2':
+            result=subtract(num1,num2)
+        elif choice=='3':
+            result=multiply(num1,num2)
         else:
             try:
-                result = divide(num1, num2)
+                result=divide(num1,num2)
             except ValueError as e:
                 print(e)
                 continue
+        print(f"Result:{result}")
 
-        print(f"Result: {result}")
-
-if __name__ == "__main__":
+if __name__=="__main__":
     main()
+            
+
+
