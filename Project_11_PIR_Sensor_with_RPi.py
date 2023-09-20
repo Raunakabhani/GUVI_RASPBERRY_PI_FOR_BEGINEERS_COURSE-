@@ -16,7 +16,7 @@ while True:
     #check if motion is detected by reading the pir input (1 if high ,0 if low )
     if GPIO.input(PIR_input)==GPIO.HIGH:
         #turn on the led if motion is detected
-        GPIO.output(LE,GPIO.HIGH)
+        GPIO.output(LED,GPIO.HIGH)
     else:
         #turn off the led if no motion is detected
         GPIO.output(LED,GPIO.LOW)
