@@ -1,6 +1,6 @@
 import RPi.GPIO as gp
 from time import sleep
-
+gp.setwarnings(False)
 gp.setmode(gp.BOARD)    # Set the GPIO pin numbering mode to BOARD
 gp.setup(23, gp.IN)     # Set pin 23 as input (reading from sensor)
 gp.setup(33, gp.OUT)    # Set pin 33 as output (LED)

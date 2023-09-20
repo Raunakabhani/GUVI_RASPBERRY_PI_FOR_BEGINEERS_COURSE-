@@ -3,7 +3,7 @@ import time
 
 # Define the GPIO pin for the servo
 servoPIN = 17
-
+GPIO.setwarnings(False)
 # Set the GPIO mode to use BCM numbering
 GPIO.setmode(GPIO.BCM)
 

@@ -3,7 +3,7 @@ import time
 
 # Set the GPIO mode to use physical pin numbering
 GPIO.setmode(GPIO.BOARD)
-
+GPIO.setwarnings(False)
 # Define the GPIO pins for Trigger and Echo
 GPIO_TRIG = 7  # Physical pin 7
 GPIO_ECHO = 11  # Physical pin 11
